@@ -11,7 +11,7 @@ import pandas as pd
 import string
 
 
-def clean_strings(df: pd.DataFrame, col: str):
+def clean_strings(df: pd.DataFrame, col: str) -> pd.DataFrame:
     """
     Function to remove punctuation from strings and convert to lowercase
 

@@ -4,14 +4,14 @@ Date: 04/07/2021
 Description: Module containing functionality for loading the data
 
 Possible future expansions:
-- Adding functions for combining datasets
-- Add options for returning files as pyspark dataframes (or other) instead of just pandas
+- Adding functionality for combining datasets
+- Could use something else instead of pandas e.g. pyspark.sql dataframes
 """
 
 import pandas as pd
 
 
-def load_data(path: str, file_name: str):
+def load_data(path: str, file_name: str) -> pd.DataFrame:
     """
     Function for loading a single dataset into a pandas dataframe.
 
