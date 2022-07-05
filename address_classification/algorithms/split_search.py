@@ -90,7 +90,7 @@ class SplitSearch(object):
         """
         Function to return the pandas dataframe of accuracy for each class
         """
-        acc_df = validation.accuracy(self.df, label_col=self.cntry_col, prediction_col=self.pred_cntry_col)
+        acc_df = validation.class_accuracy(self.df, label_col=self.cntry_col, prediction_col=self.pred_cntry_col)
 
         return acc_df
 

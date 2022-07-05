@@ -9,7 +9,7 @@ Possible future expansions:
 import pandas as pd
 
 
-def accuracy(df: pd.DataFrame, label_col: str, prediction_col: str) -> pd.DataFrame:
+def class_accuracy(df: pd.DataFrame, label_col: str, prediction_col: str) -> pd.DataFrame:
     """
     Function to calculate the accuracy for each classification (country)
 
