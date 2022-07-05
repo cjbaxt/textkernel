@@ -4,7 +4,7 @@ Date: 04/07/2021
 Description: Module containing brute force city look-up algorithm
 
 Possible future expansions:
-- Parallelize the for loops
+- Parallelize the for loops in run
 """
 import collections
 import numpy as np
@@ -13,11 +13,23 @@ from utils import validation
 
 
 class SplitSearch(object):
+    """
+    SplitSeach class
+
+    Attributes:
+        df (pd.DataFrame): Pandas dataframe containing addresses
+        df_ref (pd.DataFrame): Pandas dataframe containing cities and corresponding countries
+        add_col (str): Name of the address column in df
+        pred_cntry_col (str): Name of the output predicted address column after running the algorithm
+        city_col (str): Name of the city column in the reference dataset
+        cntry_col (str): name of the country column in the reference dataset
+        dupe_cities (collections.defaultdict): Default dictionary of cities that occur in multiple countries
+    """
 
     def __init__(self, df: pd.DataFrame, df_ref: pd.DataFrame, add_col: str = 'address',
                  pred_cntry_col: str = 'country_pred', city_col: str = 'city', cntry_col: str = 'country'):
         """
-        Initialises Model with the following attributes.
+        Initialises SplitSearch with the following attributes.
 
         Args:
             df (pd.DataFrame): Pandas dataframe containing addresses
@@ -26,7 +38,6 @@ class SplitSearch(object):
             pred_cntry_col (str): Name of the output predicted address column after running the algorithm
             city_col (str): Name of the city column in the reference dataset
             cntry_col (str): name of the country column in the reference dataset
-            dupe_cities (collections.defaultdict): Default dictionary of cities that occur in multiple countries
         """
 
         self.df = df
@@ -58,16 +69,20 @@ class SplitSearch(object):
 
         # Loop over each address
         for i, row in self.df.iterrows():
+
             # Loop over each token in the address and check if it's in the cities dataframe
             for token in row[self.add_col]:
                 if token.isnumeric():
-                    pass # Cities are not going to be numeric, we can pass on these
+                    pass  # Cities are not going to be numeric, we can pass on these
 
                 elif token in self.df_ref[self.city_col].values:
                     try:
-                        self.df.loc[i, self.pred_cntry_col] = self.df_ref.loc[
-                            self.df_ref[self.city_col] == token, self.cntry_col].item()
-                    except ValueError as e:
+                        # Get the country entry(ies) from city df where token is in city column
+                        token_country = self.df_ref.loc[self.df_ref[self.city_col] == token, self.cntry_col]
+                        # Add country to predicted country in df
+                        self.df.loc[i, self.pred_cntry_col] = token_country.item()
+
+                    except ValueError:
                         self.dupe_cities[token].append(
                             self.df_ref.loc[self.df_ref[self.city_col] == token, self.cntry_col].values)
 
