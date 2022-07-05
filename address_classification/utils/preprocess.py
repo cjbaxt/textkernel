@@ -4,7 +4,8 @@ Date: 04/07/2021
 Description: Module containing functionality preprocessing the data
 
 Possible future expansions:
-- Fill missing information somehow
+- Fill missing information
+- Parse special characters to roman alphabet
 """
 
 import pandas as pd
