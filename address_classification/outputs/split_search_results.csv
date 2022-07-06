@@ -1,16 +1,101 @@
-,country,correct,total,accuracy
-0,AT,1286,1603,0.8022457891453525
-1,BE,24362,26303,0.9262061361821845
-2,CZ,13078,15655,0.8353880549345257
-3,DE,33252,38021,0.8745693169564188
-4,EE,0,7272,0.0
-5,FR,141445,202047,0.700059887055982
-6,IT,20111,24652,0.815795878630537
-7,LU,1355,1418,0.9555712270803949
-8,NL,66591,70104,0.9498887367339952
-9,PL,28818,31104,0.9265046296296297
-10,PT,27886,29274,0.952585912413746
-11,RO,168,168,1.0
-12,SE,2456,2460,0.9983739837398374
-13,SI,4185,4894,0.8551287290559869
-14,SK,3420,4883,0.7003891050583657
+,address,country,country_pred
+425348,"['avenue', 'de', 'luchon', 'gourdanpolignan']",FR,FR
+582474,"['85280', 'la', 'ferrière']",FR,
+375324,"['impasse', 'de', 'chez', 'chasseriaud', '1', 'lorignac']",FR,FR
+369616,"['rue', 'paul', 'banaston', 'lisieux']",FR,FR
+424836,"['route', 'de', 'gilis', 'cintegabelle']",FR,FR
+120505,"['via', 'dalighieri', 'san', 'pier', 'disonzo']",IT,
+368872,['caumontsuraure'],FR,FR
+524281,"['le', 'faubourg', 'gouffern', 'en', 'auge']",FR,FR
+354631,"['rue', 'des', 'fontaines', '5000', 'piney', 'france']",FR,PT
+84245,"['ulica', 'klonowa', 'bilcza']",PL,PL
+77028,"['00000', 'czersk', 'poland']",PL,PL
+25394,"['9400', 'ninove', 'belgië']",BE,BE
+70249,['sochaczew'],PL,PL
+84084,"['ulica', 'podgród', 'ćmińsk']",PL,PL
+365147,"['boulevard', 'des', 'écoles', 'le', 'puysainteréparade']",FR,
+527794,['courcelleslèslens'],FR,FR
+295972,"['r', 'eng', 'jose', 'belard', 'da', 'fonseca', '2140123', 'chamusca', 'portugal']",PT,PT
+92506,"['opava', 'czech', 'republic']",CZ,
+438293,"['route', 'de', 'meclaz', '166', '74600', 'annecy']",FR,FR
+572712,"['square', 'damboise', 'louvres']",FR,FR
+347869,['nice'],FR,FR
+78139,"['ulica', 'towarowa', 'konopiska']",PL,PL
+328859,"['oksa', 'tänav', '409', 'narva', 'linn']",EE,PL
+538635,"['avenue', 'des', 'campagnes', 'canohès']",FR,FR
+302890,"['r', 'justino', 'teixeira', 'porto']",PT,PT
+229971,"['sittard', 'netherlands']",NL,NL
+53722,"['ulica', 'fordońska', '404', 'bydgoszcz', 'poland']",PL,PL
+338044,"['väike', 'tänav', '6', 'tallinnnõmme', 'linnaosa', 'eesti']",EE,
+546575,"['rue', 'de', 'crainchet', '3', '71510', 'saintserninduplain']",FR,FR
+552145,"['chessy', 'france']",FR,PT
+575698,"['chemin', 'des', 'lones', '9031', 'montfortsurargens']",FR,FR
+341504,"['rue', 'de', 'la', 'libération', 'bohainenvermandois']",FR,FR
+210615,"['3131zl', 'vlaardingen', 'netherlands']",NL,NL
+178526,"['hagener', 'straße', 'nachrodtwiblingwerde']",DE,DE
+118201,"['via', 'iv', 'novembre', 'cividale', 'del', 'friuli']",IT,
+334843,"['aia', 'tänav', 'elva', 'linn']",EE,IT
+9752,"['srebrniče', 'slovenija']",SI,SI
+321331,"['r', 'dr', 'pedro', 'augusto', 'dias', 'valença']",PT,PT
+297743,"['en', '314', 'serapicos']",PT,PT
+139514,['riccione'],IT,IT
+472889,['geneston'],FR,FR
+461278,"['rue', 'du', 'vieux', 'pont', '30', '39300', 'pontdunavoy']",FR,FR
+153775,"['römerstraße', 'moers']",DE,DE
+541292,"['rue', 'des', 'grandes', 'gardes', 'cours']",FR,FR
+432710,"['rue', 'bergeret', 'richwiller']",FR,FR
+579290,['cavaillon'],FR,FR
+289464,['trebišov'],SK,SK
+463815,"['route', 'de', 'cambran', 'saugnacetcambran']",FR,FR
+195116,"['gefell', 'deutschland']",DE,DE
+221925,"['alphen', 'aan', 'den', 'rijn']",NL,NL
+480934,"['rue', 'de', 'boissy', '5126', '45300', 'le', 'malesherbois']",FR,FR
+447106,"['rue', 'du', 'chasselas', 'servian']",FR,FR
+244606,"['6851hd', 'huissen']",NL,NL
+341241,"['rue', 'de', 'narte', 'divonnelesbains']",FR,FR
+412627,"['30126', 'saintlaurentdesarbres', 'france']",FR,PT
+459968,"['rue', 'champollion', '62', '38450', 'vif', 'france']",FR,PT
+284200,"['9301ka', 'roden']",NL,NL
+261306,"['1502vh', 'zaandam']",NL,NL
+587139,"['86000', 'poitiers']",FR,FR
+259413,"['manenburgstraat', 'amsterdam']",NL,NL
+515257,"['rue', 'dorchies', 'marcqenbarœul', 'france']",FR,PT
+300510,"['bem', 'da', 'fe']",PT,
+112627,['belgirate'],IT,IT
+354154,"['rue', 'de', 'léglise', '16', '10400', 'avantlèsmarcilly']",FR,FR
+474777,"['rue', 'du', 'bois', 'donzion', '8', 'saintchamond', 'france']",FR,PT
+483280,"['colayracsaintcirq', 'france']",FR,PT
+156669,"['schorlemerstraße', 'neuss', 'deutschland']",DE,DE
+564737,"['rue', 'du', 'cardinal', 'mercier', 'moreuil']",FR,FR
+236250,"['varennadreef', 'helmond', 'netherlands']",NL,NL
+37891,"['8840', 'staden', 'belgien']",BE,BE
+293486,"['90863', 'radošovce', 'slovakia']",SK,SK
+477566,['romorantinlanthenay'],FR,FR
+221428,"['reeuwijk', 'netherlands']",NL,NL
+80272,"['ulica', 'romualda', 'traugutta', 'jaworzno']",PL,PL
+463908,['hagetmau'],FR,FR
+244094,"['berg', 'en', 'dalseweg', '174', '6522cc', 'nijmegen']",NL,NL
+18126,['zoersel'],BE,BE
+575095,"['impasse', 'roscius', 'fréjus']",FR,FR
+521180,"['clos', 'du', 'vivier', 'houdancourt']",FR,FR
+562491,['dugny'],FR,FR
+373467,"['rue', 'de', 'belle', 'roche', 'angoulême', 'france']",FR,PT
+327207,"['pargi', 'tänav', 'jõgeva', 'linn']",EE,
+310496,"['r', 'cerro', 'carvoeiro']",PT,PT
+363097,"['rue', 'de', 'la', 'république', 'berrelétang']",FR,FR
+561989,"['rue', 'du', 'général', 'leclerc', 'montfermeil', 'france']",FR,PT
+567837,['montbeton'],FR,FR
+340411,"['voie', 'du', 'tram', 'vieudizenave']",FR,FR
+4186,['älvsjö'],SE,SE
+330155,"['petseri', 'tänav', 'võru', 'linn']",EE,
+491165,"['grande', 'rue', 'saintouendomprot']",FR,FR
+402885,"['27370', 'vraiville', 'france']",FR,PT
+310239,"['r', 'sa', 'de', 'miranda', 'vale', 'de', 'milhacos']",PT,PT
+399953,"['rue', 'molière', '5', 'savignysurorge']",FR,FR
+123535,"['via', 'sardegna', 'ardauli']",IT,IT
+57213,"['ulica', 'rojna', 'łódź', 'poland']",PL,PL
+534753,"['les', 'vernes', 'saintrémysurdurolle']",FR,FR
+15445,"['ardooie', 'belgien']",BE,BE
+342755,"['rue', 'de', 'rozoy', 'noircourt']",FR,FR
+167312,"['gildehauser', 'damm', 'gronau', 'westf']",DE,
+126446,"['via', 'ferrarese', 'bologna']",IT,IT

@@ -25,6 +25,41 @@ If there are no errors then it works. Now you should be good to go.
 
 *instructions for setting up virtual environments on windows can be found online
 
+## Project structure 
+```
+|-- README.md
+|-- address_classification
+|   |-- address_classification.ipynb
+|   |-- algorithms
+|   |   |-- __init__.py
+|   |   |-- __pycache__
+|   |   |-- sklearn_base_estimator.py
+|   |   `-- split_search.py
+|   |-- config.yml
+|   |-- dataset
+|   |   |-- LICENSE.txt
+|   |   |-- README.md
+|   |   |-- addresses.jsonl
+|   |   |-- cities.jsonl
+|   |   `-- new_addresses.csv
+|   |-- import_test.py
+|   |-- outputs
+|   |   |-- dupe_cities.npy
+|   |   |-- encoded_classes.npy
+|   |   |-- finalized_model.sav
+|   |   |-- split_search_accuracy.csv
+|   |   `-- split_search_results.csv
+|   |-- predict_country.py
+|   |-- setup.py
+|   `-- utils
+|       |-- __init__.py
+|       |-- __pycache__
+|       |-- accessors.py
+|       |-- preprocess.py
+|       `-- validation.py
+`-- requirements.txt
+```
+
 ## To run the code 
 
 I have created a model that can be used to predict country based on incomplete address information.   
