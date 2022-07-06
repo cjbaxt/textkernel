@@ -12,11 +12,11 @@ Make a virtual environment. I chose to make my virtual environment outside the p
 ```python3 -m venv <pathname>``` e.g. python3 -m venv ~claire.baxter/virtualenvs/tk_venv  
 ```source <pathname>/bin/activate```
 
-Then go to `textkernel` and install from the requirements.txt  
+Then cd to textkernel and install from the requirements.txt:
 ```cd textkernel```  
 ```pip install -r requirements.txt```  
 
-Then enter address_classification and setup custom modules  
+Then cd to address_classification and setup custom modules:
 ```cd address_classification```  
 ```pip install -e .```  
 ```python import_test.py```
