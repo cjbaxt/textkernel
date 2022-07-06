@@ -12,20 +12,16 @@ Make a virtual environment. I chose to make my virtual environment outside the p
 ```python3 -m venv <pathname>``` e.g. python3 -m venv ~claire.baxter/virtualenvs/tk_venv  
 ```source <pathname>/bin/activate```
 
-Then go to textkernel and install from the requirements.txt  
+Then go to `textkernel` and install from the requirements.txt  
 ```cd textkernel```  
 ```pip install -r requirements.txt```  
 
-Then enter address_classification and setup custom modules
-```cd address_classification```
+Then enter address_classification and setup custom modules  
+```cd address_classification```  
 ```pip install -e .```  
 ```python import_test.py```
 
-Now you should be good to go.
-
-For Daniel: 
-
-If there are no errors then it works 
+If there are no errors then it works. Now you should be good to go.
 
 *instructions for setting up virtual environments on windows can be found online
 
