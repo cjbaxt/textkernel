@@ -1,0 +1,3 @@
+model_filename: 'outputs/finalized_model.sav'
+encoder_filename: 'outputs/encoded_classes.npy'
+address_filename: 'dataset/new_addresses.csv'

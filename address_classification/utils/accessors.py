@@ -9,6 +9,7 @@ Possible future expansions:
 """
 
 import pandas as pd
+import yaml
 
 
 def load_data(path: str, file_name: str) -> pd.DataFrame:
@@ -36,3 +37,24 @@ def load_data(path: str, file_name: str) -> pd.DataFrame:
         raise NotImplementedError("Filetype '{}' not implemented yet.".format(ft))
 
     return df
+
+
+def get_config(config_path: str):
+    """
+    Function to load the configuration file.
+
+    Args:
+        config_path (str): Path to config file
+
+    Returns:
+        config (dict): Dictionary containing configuration information for a feature.
+    """
+
+    try:
+        with open(config_path, "r") as f:
+            config = yaml.load(f, Loader=yaml.FullLoader)
+
+    except Exception as e:
+        raise ValueError("Could not load log file due to error: {0}".format(e))
+
+    return config
