@@ -16,6 +16,6 @@ setup(name='textkernel',
       version='0.0.1',
       # Specify packages (directories with __init__.py) to install.
       # You could use find_packages(exclude=['modules']) as well
-      packages=['utils'],  # These need to have __init__.py
+      packages=['utils', 'algorithms'],  # These need to have __init__.py
       include_package_data=True,
       )
