@@ -17,6 +17,5 @@ scikit-learn==1.1.1
 scipy==1.8.1
 six==1.16.0
 sklearn==0.0
--e git+https://github.com/cjbaxt/textkernel.git@afe52f28fa5d4b71e3ed47df57a879ebc0310163#egg=textkernel&subdirectory=address_classification
 threadpoolctl==3.1.0
 tqdm==4.64.0

@@ -1,6 +1,25 @@
 # textkernel
 Textkernel programming challenge July 2022
 
+# Clone repo and set-up the venv 
+
+In order to clone the git repo:
+
+```git clone https://github.com/cjbaxt/textkernel.git```
+
+I chose to make my virtual environment outside the package:
+
+```python3 -m venv <pathname>``` e.g. python3 -m venv ~claire.baxter/virtualenvs/tk_venv  
+```source <pathname>/bin/activate```
+
+Then go to textkernel and install from the requirements.txt  
+```cd textkernel```  
+```pip install -r requirements.txt```  
+```pip install -e .```  
+```cd address_classification```
+
+Now you should be good to go.
+
 # Initial approach 
 - load data 
 - calculate some basic statistics on data
