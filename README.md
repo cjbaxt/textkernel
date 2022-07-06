@@ -15,13 +15,16 @@ Make a virtual environment. I chose to make my virtual environment outside the p
 Then go to textkernel and install from the requirements.txt  
 ```cd textkernel```  
 ```pip install -r requirements.txt```  
-```pip install -e .```  
+
+Then enter address_classification and setup custom modules
 ```cd address_classification```
+```pip install -e .```  
+```python import_test.py```
 
 Now you should be good to go.
 
 For Daniel: 
-```python import_test.py```
+
 If there are no errors then it works 
 
 *instructions for setting up virtual environments on windows can be found online

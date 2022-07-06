@@ -22,3 +22,5 @@ from sklearn.tree import DecisionTreeClassifier
 # Custom imports
 import algorithms
 from utils import accessors, preprocess, validation
+
+print("All imports imported!")
