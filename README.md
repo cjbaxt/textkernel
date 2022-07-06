@@ -35,8 +35,9 @@ different models and hyperparamter combinations to export the best model (highes
 
 In `predict_country.py` you will find a script to load the model and apply it to new data to get a prediction. New data
 can be added to a csv with each new line indicating a new (partial) address, and the location and name of this csv can 
-be added to `config.yml`. To run the code simply do: 
+be added to `config.yml`. To run the code simply do:   
 ```python predict_country.py config.yml```
+
 Note: The model is limited to and can only classify addresses in the countries that are in the original training set. 
 
 ## TODO 
