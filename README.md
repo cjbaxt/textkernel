@@ -64,16 +64,26 @@ If there are no errors then it works. Now you should be good to go.
 
 ## To run the code 
 
-I have created a model that can be used to predict country based on incomplete address information.   
+I have created a model that can be used to predict country based on incomplete address information. I have broken this 
+down into two main files:
 
-In `address_classification.ipynb` you will find my working out. This includes: loading the data, preprocessing it, 
-quick data analytics, simple model fitting (search city in index) and a machine learning approach where I have tested 
-different models and hyperparamter combinations to export the best model (highest accuracy). 
+####address_classification.ipynb
+A notebook containing my approach to the problem and model generation.
+This can be opened in jupyter with the following:   
+`jupyter notebook address_classification.ipynb`
+####predict_country.py
+A script to load the model, apply it to new data to get a prediction. 
+This can be run with the following:   
+```python predict_country.py config.yml```  
 
-In `predict_country.py` you will find a script to load the model and apply it to new data to get a prediction. New data
-can be added to a csv with each new line indicating a new (partial) address, and the location and name of this csv can 
-be added to `config.yml`. To run the code simply do:   
-```python predict_country.py config.yml```
+ In the config you can specify: 
+```
+model_filename: path and filename to the exported model
+encoder_filename:  path and filename to the label encoder
+address_filename: path and filename to a file containing new addresses for classifying, each address separated with a 
+new line
+predict_out_filename: path and file name to store the outputs
+```
 
 Note: The model is limited to and can only classify addresses in the countries that are in the original training set. 
 
@@ -97,21 +107,13 @@ The general approach can be found in my notebook `address_classification.ipynb`.
   - Create a sci-kit learn pipeline to test a couple of different classification models and tune the hyperparameters
     (see `algorithms/sklearn_base_estimator.py`)
 - Results  
-  - The best model is a Naive Bayes classifer, achieving 99.7% accuracy on the test data. For the scope of this
+  - The best model is a Naive Bayes classifer (score = accuracy), achieving 99.7% accuracy on the test data. For the scope of this
   assignment, I deemed this to be an acceptable accuracy score. :) 
   - Export the model to be used in `predict_country.py`
   - Take a look at the incorrectly classified addresses and notice that the algorithm can correctly identify the type 
   of language, e.g. BE is incorrectly identified at FR and NL most of the time.
   
-Use `python predict_country.py config.yml` to predict on new data. In the config you can specify: 
-```
-model_filename: path and filename to the exported model
-encoder_filename:  path and filename to the label encoder
-address_filename: path and filename to a file containing new addresses for classifying, each address separated with a 
-new line
-predict_out_filename: path and file name to store the outputs
-```
-
+Then one can use `python predict_country.py config.yml` to predict on new data.
 
 
 ## Future improvements
