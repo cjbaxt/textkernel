@@ -1,7 +1,7 @@
 # textkernel
 Textkernel programming challenge July 2022
 
-# Clone repo and set-up the venv 
+## Clone repo and set-up the venv 
 
 In order to clone the git repo:
 
@@ -25,7 +25,10 @@ If there are no errors then it works. Now you should be good to go.
 
 *instructions for setting up virtual environments on windows can be found online
 
-# Initial approach 
+## TODO 
+fill out the rest of the file
+
+## Initial approach 
 - load data 
 - calculate some basic statistics on data
   - any missing data?
@@ -38,8 +41,8 @@ If there are no errors then it works. Now you should be good to go.
 - Use sci-kit learn pipelines to test different classification models (but they use tensor flow)
 
 
-# How to improve in the future
+## How to improve in the future
 - To scale it this could easily be implemented using Dask instead of pandas, PySpark etc
 
-# TODO
+
 Figure out how to download the virtual environment so they can run my code 
