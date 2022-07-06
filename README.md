@@ -1,5 +1,7 @@
 # textkernel
-Textkernel programming challenge July 2022
+Textkernel programming challenge July 2022.
+
+Create an algorithm for identifying the country an address belongs to.
 
 ## Clone repo and set-up the venv 
 
@@ -75,24 +77,46 @@ be added to `config.yml`. To run the code simply do:
 
 Note: The model is limited to and can only classify addresses in the countries that are in the original training set. 
 
-## TODO 
-fill out the rest of the file
+## General approach 
 
-## Initial approach 
-- load data 
-- calculate some basic statistics on data
-  - any missing data?
-  - how many entries?
-  - how many countries? (e.g. how many classes)
-  - entries per country? (any countries that are lacking data?)
-- Keep it simple at first
-- Perform any pre-processing (if required)
-- Train test split of dataset 80/20
-- Use sci-kit learn pipelines to test different classification models (but they use tensor flow)
+The general approach can be found in my notebook `address_classification.ipynb`. Essentially:
+- Load data (see `utils/accessors.py`)
+- Calculate some basic statistics on data
+  - Any missing data?
+  - How many entries?
+  - Entries per country? (any countries that are lacking data?)
+- Perform any pre-processing (see `utils/preprocess.py`)
+  - everything to lowercase
+  - remove punctuation 
+  - drop duplicates
+- A quick implementation of the 'search split' (see `algorithms/search_split.py`). This is the approach described in the assignment guidelines 
+  - This achieves around 90% accuracy and has several drawbacks outlined in the notebook. (see `utils/validation.py`)
+- I follow this up with a simple machine learning approach:
+  - Train test split of dataset 80/20
+  - Enocde the label column to numerical values
+  - Create a sci-kit learn pipeline to test a couple of different classification models and tune the hyperparameters
+    (see `algorithms/sklearn_base_estimator.py`)
+- Results  
+  - The best model is a Naive Bayes classifer, achieving 99.7% accuracy on the test data. For the scope of this
+  assignment, I deemed this to be an acceptable accuracy score. :) 
+  - Export the model to be used in `predict_country.py`
+  - Take a look at the incorrectly classified addresses and notice that the algorithm can correctly identify the type 
+  of language, e.g. BE is incorrectly identified at FR and NL most of the time.
+  
+Use `python predict_country.py config.yml` to predict on new data. In the config you can specify: 
+```
+model_filename: path and filename to the exported model
+encoder_filename:  path and filename to the label encoder
+address_filename: path and filename to a file containing new addresses for classifying, each address separated with a 
+new line
+predict_out_filename: path and file name to store the outputs
+```
 
 
-## How to improve in the future
-- To scale it this could easily be implemented using Dask instead of pandas, PySpark etc
 
-
-Figure out how to download the virtual environment so they can run my code 
+## Future improvements
+- To scale more this could easily be implemented using Dask instead of pandas or PySpark etc
+- Try other word vectorizers, e.g. CountVectorizer, Word2vec
+- Take a close look at the behaviour of special characters
+- Other classifiers or deep learning models
+- On top of these things, several of the files mentioned have some future improvements mentioned in the docstrings
