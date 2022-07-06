@@ -25,6 +25,19 @@ If there are no errors then it works. Now you should be good to go.
 
 *instructions for setting up virtual environments on windows can be found online
 
+## To run the code 
+
+I have created a model that can be used to predict country based on incomplete address information.   
+
+In `address_classification.ipynb` you will find my working out. This includes: loading the data, preprocessing it, 
+quick data analytics, simple model fitting (search city in index) and a machine learning approach where I have tested 
+different models and hyperparamter combinations to export the best model (highest accuracy). 
+
+In `predict_country.py` you will find a script to load the model and apply it to new data to get a prediction. New data
+can be added to a csv with each new line indicating a new (partial) address, and the location and name of this csv can 
+be added to `config.yml`. To run the code simple do: 
+```python predict_country.py config.yml```
+
 ## TODO 
 fill out the rest of the file
 
