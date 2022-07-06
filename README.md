@@ -7,7 +7,7 @@ In order to clone the git repo:
 
 ```git clone https://github.com/cjbaxt/textkernel.git```
 
-I chose to make my virtual environment outside the package:
+Make a virtual environment. I chose to make my virtual environment outside the package (on macOS*):
 
 ```python3 -m venv <pathname>``` e.g. python3 -m venv ~claire.baxter/virtualenvs/tk_venv  
 ```source <pathname>/bin/activate```
@@ -19,6 +19,12 @@ Then go to textkernel and install from the requirements.txt
 ```cd address_classification```
 
 Now you should be good to go.
+
+For Daniel: 
+```python import_test.py```
+If there are no errors then it works 
+
+*instructions for setting up virtual environments on windows can be found online
 
 # Initial approach 
 - load data 
