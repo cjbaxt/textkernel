@@ -35,7 +35,8 @@ def run(config):
 
     # Return the prediction
     print(tabulate(add_df, headers='keys', tablefmt='psql'))
-
+    add_df.to_csv(config['predict_out_filename'])
+    print('Done!')
 
 if __name__ == "__main__":
     # Load config
