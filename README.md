@@ -67,11 +67,11 @@ If there are no errors then it works. Now you should be good to go.
 I have created a model that can be used to predict country based on incomplete address information. I have broken this 
 down into two main files:
 
-####address_classification.ipynb
+###address_classification.ipynb
 A notebook containing my approach to the problem and model generation.
 This can be opened in jupyter with the following:   
 `jupyter notebook address_classification.ipynb`
-####predict_country.py
+###predict_country.py
 A script to load the model, apply it to new data to get a prediction. 
 This can be run with the following:   
 ```python predict_country.py config.yml```  
