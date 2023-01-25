@@ -1,5 +1,5 @@
 # textkernel
-Textkernel programming challenge July 2022.
+Textkernel programming challenge.
 
 Create an algorithm for identifying the country an address belongs to.
 
